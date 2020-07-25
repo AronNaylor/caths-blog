@@ -17,6 +17,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
+    
   `)
 
   // 3. create new pages

@@ -5,15 +5,23 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const postData = graphql`
     query($slug: String) {
-        contentfulBlogPost(slug: { eq: $slug }) {
+        contentfulBlogPost(slug: { eq: $slug}) {
             title
-            publishedDate(formatString: "MMMM DD YYYY")
-            body {
+            publishedDate
+            tag
+            images {
+                fluid {
+                    src
+                }
+            }
+            content {
                 json
             }
         }
     }
 `
+
+console.log(postData)
 
 export default function BlogPost(props) {
   const options = {
@@ -31,7 +39,7 @@ export default function BlogPost(props) {
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
       {documentToReactComponents(
-        props.data.contentfulBlogPost.body.json,
+        props.data.contentfulBlogPost.content.json,
         options
       )}
     </Layout>
