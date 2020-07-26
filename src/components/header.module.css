@@ -1,0 +1,21 @@
+.navContainer {
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.link {
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.link:hover {
+    color: white;
+}
+
+.activeLink {
+    font-weight: bold;
+    text-decoration: underline;
+}

@@ -9,7 +9,7 @@ function Blog() {
 
   return (
     <Layout>
-      <SEO title="Page two"/>
+      <SEO title="Blog"/>
       <h1>Blog</h1>
       <Link to="/">Go back to the homepage</Link>
       <Link to="/europe">Europe</Link>
