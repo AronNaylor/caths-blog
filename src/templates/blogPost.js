@@ -5,23 +5,15 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 export const postData = graphql`
     query($slug: String) {
-        contentfulBlogPost(slug: { eq: $slug}) {
+        contentfulBlogPost(slug: { eq: $slug }) {
             title
-            publishedDate
-            tag
-            images {
-                fluid {
-                    src
-                }
-            }
-            content {
+            publishedDate(formatString: "MMMM DD YYYY")
+            childContentfulBlogPostContentRichTextNode {
                 json
             }
         }
     }
 `
-
-console.log(postData)
 
 export default function BlogPost(props) {
   const options = {
@@ -29,9 +21,9 @@ export default function BlogPost(props) {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url}/>
-      }
-    }
+        return <img alt={alt} src={url} />
+      },
+    },
   }
 
   return (
@@ -39,7 +31,7 @@ export default function BlogPost(props) {
       <h1>{props.data.contentfulBlogPost.title}</h1>
       <p>{props.data.contentfulBlogPost.publishedDate}</p>
       {documentToReactComponents(
-        props.data.contentfulBlogPost.content.json,
+        props.data.contentfulBlogPost.childContentfulBlogPostContentRichTextNode.json,
         options
       )}
     </Layout>
