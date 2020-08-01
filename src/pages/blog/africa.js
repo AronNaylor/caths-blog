@@ -1,20 +1,20 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
-function SouthAmerica() {
+function Africa() {
 
   const blogData = useStaticQuery(graphql`
       query {
-          allContentfulBlogPost(filter: {tag: {eq: "south america"}}) {
+          allContentfulBlogPost {
               edges {
                   node {
                       title
                       slug
                       tag
-                      publishedDate
+                      publishedDate(formatString: "MMMM DD YYYY")
                   }
               }
           }
@@ -46,4 +46,4 @@ function SouthAmerica() {
 }
 
 
-export default SouthAmerica
+export default Africa

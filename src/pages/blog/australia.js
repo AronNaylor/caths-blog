@@ -1,14 +1,14 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../../components/layout"
+import SEO from "../../components/seo"
 
-function Europe() {
+function Australia() {
 
   const blogData = useStaticQuery(graphql`
       query {
-          allContentfulBlogPost(filter: {tag: {eq: "europe"}}) {
+          allContentfulBlogPost {
               edges {
                   node {
                       title
@@ -46,4 +46,4 @@ function Europe() {
 }
 
 
-export default Europe
+export default Australia

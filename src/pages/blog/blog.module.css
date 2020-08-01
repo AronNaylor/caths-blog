@@ -1,0 +1,22 @@
+.title {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.cardPadding {
+    padding-bottom: 15px;
+}
+
+.cardBodyStyle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.linkText {
+    color: #343A40;
+}
+
+.linkText:hover {
+    color: chocolate;
+}

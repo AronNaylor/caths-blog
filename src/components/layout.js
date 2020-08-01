@@ -18,15 +18,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div>
+      <div id="layoutContainer">
         <Header/>
-        <Container fluid>
-          {children}
-        </Container>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <main id="main">
+          <Container fluid>
+            {children}
+          </Container>
+        </main>
+        <footer id="footer">
+          Sunshine Cray © {new Date().getFullYear()}
         </footer>
       </div>
     </>
