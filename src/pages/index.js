@@ -37,7 +37,7 @@ function IndexPage() {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} sm={12} md={{span: 4, offset: 4}}>
+        <Col xs={12} sm={12} md={{ span: 4, offset: 4 }}>
           <Img fluid={imgArr[1]} alt={"About page photo 2"}/>
 
         </Col>
