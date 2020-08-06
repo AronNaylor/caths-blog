@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { Container, Row, Col, Image } from "react-bootstrap"
 
 export const postData = graphql`
     query($slug: String) {
@@ -21,19 +22,39 @@ export default function BlogPost(props) {
       "embedded-asset-block": node => {
         const alt = node.data.target.fields.title["en-US"]
         const url = node.data.target.fields.file["en-US"].url
-        return <img alt={alt} src={url} />
+        return (
+          <Row>
+            <Col xs={12} md={{offset: 1, span: 10}} lg={{offset: 2}} xl={{offset: 3}}>
+              <Image alt={alt} src={url} fluid rounded />
+            </Col>
+          </Row>
+        )
       },
     },
   }
 
   return (
     <Layout>
-      <h1>{props.data.contentfulBlogPost.title}</h1>
-      <p>{props.data.contentfulBlogPost.publishedDate}</p>
-      {documentToReactComponents(
-        props.data.contentfulBlogPost.childContentfulBlogPostContentRichTextNode.json,
-        options
-      )}
+      <Container>
+          <Row>
+            <Col>
+              <h1 style={{fontWeight: "bold", textAlign: 'center'}}>{props.data.contentfulBlogPost.title}</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <p style={{fontWeight: "bold", textAlign: 'center'}}>{props.data.contentfulBlogPost.publishedDate}</p>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              {documentToReactComponents(
+                props.data.contentfulBlogPost.childContentfulBlogPostContentRichTextNode.json,
+                options
+              )}
+            </Col>
+          </Row>
+      </Container>
     </Layout>
   )
 }

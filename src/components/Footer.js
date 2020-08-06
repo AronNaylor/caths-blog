@@ -14,9 +14,9 @@ export default function Footer() {
   `)
 
   return (
-    <footer className="flex flex-row justify-center pb-1 bg-blue-700 text-white">
+    <footer>
       <p>Sunshine Cray</p>
-      <p className="font-semibold">
+      <p>
         {data.site.siteMetadata.author} &copy; {data.site.siteMetadata.date}{" "}
       </p>
     </footer>

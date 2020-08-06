@@ -33,7 +33,7 @@ function IndexPage() {
       <SEO title="Home"/>
       <Row>
         <Col xs={12} style={{ textAlign: "center", paddingBottom: "25px" }}>
-          <h1>Welcome!</h1>
+          <h1 style={{fontWeight: "bold"}}>Welcome!</h1>
         </Col>
       </Row>
       <Row>
@@ -43,7 +43,7 @@ function IndexPage() {
         </Col>
       </Row>
       <Row style={{ paddingTop: "25px" }}>
-        <Col xs={12} md={{ span: 10, offset: 1 }}>
+        <Col xs={12} md={{ span: 10, offset: 1 }} lg={{span: 8, offset: 2}}>
           <p>
             I'm Cath, and I've been keen to see as much of the world from as long as I can remember. I've written
             extensively since I was 18 years old venturing on my first long haul trip to India and beyond, but using old
@@ -53,15 +53,17 @@ function IndexPage() {
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={{ span: 10, offset: 1 }}>
+        <Col xs={12} md={{ span: 10, offset: 1 }} lg={{span: 8, offset: 2}}>
           <p>At <b>29</b>, I have visited <b>29</b> countries.</p>
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={{ span: 10, offset: 1 }}>
-          I plan to see a lot more, so best endeavors to get this blog up to date and I can continue capturing memories
-          from the far corners of the world to avoid forgetting all the wonderful people, places,beaches and tales along
-          the way.
+        <Col xs={12} md={{ span: 10, offset: 1 }} lg={{span: 8, offset: 2}}>
+          <p>
+            I plan to see a lot more, so best endeavors to get this blog up to date and I can continue capturing memories
+            from the far corners of the world to avoid forgetting all the wonderful people, places,beaches and tales along
+            the way.
+          </p>
         </Col>
       </Row>
     </Layout>

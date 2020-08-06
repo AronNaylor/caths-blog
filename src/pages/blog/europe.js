@@ -30,8 +30,8 @@ function Europe() {
       <SEO title="Europe"/>
       <Row>
         <Col className={countryStyles.titleContainer}>
-          <h1 className={countryStyles.title}>Asia</h1>
-        </Col>
+          <h1 className={countryStyles.title}>Europe</h1>
+        </Col>S
       </Row>
       <Row>
         <Col xs={12} lg={{span: 6, offset: 3}}>

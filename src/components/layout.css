@@ -22,3 +22,14 @@
     padding-bottom: 5px;
     padding-top: 5px;
 }
+
+@media only screen and (max-width: 640px) {
+    h1 {
+        font-size: larger;
+    }
+
+    p {
+        font-size: large;
+    }
+}
+
