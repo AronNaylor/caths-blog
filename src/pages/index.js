@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
-import { Col, Row, Image } from "react-bootstrap"
+import { Col, Row } from "react-bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Layout from "../components/layout"
