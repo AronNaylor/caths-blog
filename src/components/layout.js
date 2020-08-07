@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
           </Container>
         </main>
         <footer id="footer">
-          Sunshine Cray © {new Date().getFullYear()}
+          <p style={{fontWeight: 'bold'}}>Sunshine Cray © {new Date().getFullYear()}</p>
         </footer>
       </div>
     </>
