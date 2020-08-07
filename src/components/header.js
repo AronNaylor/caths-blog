@@ -13,21 +13,21 @@ function Header() {
           className={headerStyles.link}
           activeClassName={headerStyles.activeLink}
         >
-          <a>Home</a>
+          Home
         </Link>
         <Link
           to="/blog"
           className={headerStyles.link}
           activeClassName={headerStyles.activeLink}
         >
-          <a>Blog</a>
+          Blog
         </Link>
         <Link
           to="/gallery"
           className={headerStyles.link}
           activeClassName={headerStyles.activeLink}
         >
-          <a>Gallery</a>
+          Gallery
         </Link>
       </div>
     </Navbar>
