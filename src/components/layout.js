@@ -7,26 +7,26 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-      query SiteTitleQuery {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
       }
+    }
   `)
 
   return (
     <>
       <div id="layoutContainer">
-        <Header/>
+        <Header />
         <main id="main">
-          <Container fluid>
-            {children}
-          </Container>
+          <Container fluid>{children}</Container>
         </main>
         <footer id="footer">
-          <p style={{fontWeight: 'bold'}}>Sunshine Cray © {new Date().getFullYear()}</p>
+          <p style={{ fontWeight: "bold" }}>
+            Sunshine Cray © {new Date().getFullYear()}
+          </p>
         </footer>
       </div>
     </>
@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout

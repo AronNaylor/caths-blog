@@ -3,14 +3,14 @@ import { graphql, useStaticQuery } from "gatsby"
 
 export default function Footer() {
   const data = useStaticQuery(graphql`
-      query {
-          site {
-              siteMetadata {
-                  date
-                  author
-              }
-          }
+    query {
+      site {
+        siteMetadata {
+          date
+          author
+        }
       }
+    }
   `)
 
   return (

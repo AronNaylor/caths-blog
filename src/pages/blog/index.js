@@ -10,49 +10,77 @@ import blogStyles from "./blog.module.css"
 function Index() {
   return (
     <Layout>
-      <SEO title="Index"/>
+      <SEO title="Index" />
       <h1 className={blogStyles.title}>Blog</h1>
       <Row>
         <Col xs={12} md={4} className={blogStyles.cardPadding}>
           <Card>
-            <Card.Img variant='top' src={require("../../images/blog/europe.jpg")}/>
+            <Card.Img
+              variant="top"
+              src={require("../../images/blog/europe.jpg")}
+            />
             <Card.Body className={blogStyles.cardBodyStyle}>
-              <Link to="/blog/europe" className={blogStyles.linkText}><Button variant="dark">Europe</Button></Link>
+              <Link to="/blog/europe" className={blogStyles.linkText}>
+                <Button variant="dark">Europe</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={12} md={4} className={blogStyles.cardPadding}>
           <Card>
-            <Card.Img variant='top' src={require("../../images/blog/asia.jpg")}/>
+            <Card.Img
+              variant="top"
+              src={require("../../images/blog/asia.jpg")}
+            />
             <Card.Body className={blogStyles.cardBodyStyle}>
-              <Link to="/blog/asia" className={blogStyles.linkText}><Button variant="dark">Asia</Button></Link>
+              <Link to="/blog/asia" className={blogStyles.linkText}>
+                <Button variant="dark">Asia</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={12} md={4} className={blogStyles.cardPadding}>
           <Card>
-            <Card.Img variant='top' src={require("../../images/blog/samerica.jpg")}/>
+            <Card.Img
+              variant="top"
+              src={require("../../images/blog/samerica.jpg")}
+            />
             <Card.Body className={blogStyles.cardBodyStyle}>
-              <Link to="/blog/americas" className={blogStyles.linkText}><Button variant="dark">Americas</Button></Link>
+              <Link to="/blog/americas" className={blogStyles.linkText}>
+                <Button variant="dark">Americas</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
       </Row>
       <Row>
-        <Col xs={12} md={{ offset: 2, span: 4 }} className={blogStyles.cardPadding}>
+        <Col
+          xs={12}
+          md={{ offset: 2, span: 4 }}
+          className={blogStyles.cardPadding}
+        >
           <Card>
-            <Card.Img variant='top' src={require("../../images/blog/africa.jpg")}/>
+            <Card.Img
+              variant="top"
+              src={require("../../images/blog/africa.jpg")}
+            />
             <Card.Body className={blogStyles.cardBodyStyle}>
-              <Link to="/blog/africa" className={blogStyles.linkText}><Button variant="dark">Africa</Button></Link>
+              <Link to="/blog/africa" className={blogStyles.linkText}>
+                <Button variant="dark">Africa</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
         <Col xs={12} md={{ span: 4 }} className={blogStyles.cardPadding}>
           <Card>
-            <Card.Img variant='top' src={require("../../images/blog/aus.jpg")}/>
+            <Card.Img
+              variant="top"
+              src={require("../../images/blog/aus.jpg")}
+            />
             <Card.Body className={blogStyles.cardBodyStyle}>
-              <Link to="/blog/australia" className={blogStyles.linkText}><Button
-                variant="dark">Australia</Button></Link>
+              <Link to="/blog/australia" className={blogStyles.linkText}>
+                <Button variant="dark">Australia</Button>
+              </Link>
             </Card.Body>
           </Card>
         </Col>
@@ -60,6 +88,5 @@ function Index() {
     </Layout>
   )
 }
-
 
 export default Index

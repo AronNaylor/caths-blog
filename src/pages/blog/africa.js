@@ -5,27 +5,26 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
 function Africa() {
-
   const blogData = useStaticQuery(graphql`
-      query {
-          allContentfulBlogPost {
-              edges {
-                  node {
-                      title
-                      slug
-                      tag
-                      publishedDate(formatString: "MMMM DD YYYY")
-                  }
-              }
+    query {
+      allContentfulBlogPost {
+        edges {
+          node {
+            title
+            slug
+            tag
+            publishedDate(formatString: "MMMM DD YYYY")
           }
+        }
       }
+    }
   `)
 
   console.log(blogData)
 
   return (
     <Layout>
-      <SEO title="Page two"/>
+      <SEO title="Page two" />
       <h1>Blog</h1>
       <Link to="/">Go back to the homepage</Link>
       <ol>
@@ -44,6 +43,5 @@ function Africa() {
     </Layout>
   )
 }
-
 
 export default Africa

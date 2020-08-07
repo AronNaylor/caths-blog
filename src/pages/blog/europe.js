@@ -4,38 +4,37 @@ import { Row, Col, Card, Badge } from "react-bootstrap"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import countryStyles from "./country.module.css";
+import countryStyles from "./country.module.css"
 
 function Europe() {
-
   const blogData = useStaticQuery(graphql`
-      query {
-          allContentfulBlogPost(filter: {tag: {eq: "Europe"}}) {
-              edges {
-                  node {
-                      title
-                      slug
-                      tag
-                      country
-                      publishedDate(formatString: "MMMM DD YYYY")
-                      shortDesc
-                  }
-              }
+    query {
+      allContentfulBlogPost(filter: { tag: { eq: "Europe" } }) {
+        edges {
+          node {
+            title
+            slug
+            tag
+            country
+            publishedDate(formatString: "MMMM DD YYYY")
+            shortDesc
           }
+        }
       }
+    }
   `)
 
   return (
     <Layout>
-      <SEO title="Europe"/>
+      <SEO title="Europe" />
       <Row>
         <Col className={countryStyles.titleContainer}>
           <h1 className={countryStyles.title}>Europe</h1>
-        </Col>S
+        </Col>
+        S
       </Row>
       <Row>
-        <Col xs={12} lg={{span: 6, offset: 3}}>
-
+        <Col xs={12} lg={{ span: 6, offset: 3 }}>
           {blogData.allContentfulBlogPost.edges.map(blog => {
             return (
               <div className={countryStyles.cardContainer}>
@@ -43,7 +42,9 @@ function Europe() {
                   <Row>
                     <Col>
                       <Link to={`/blog/${blog.node.slug}`}>
-                        <h2 className={countryStyles.cardTitle}>{blog.node.title}</h2>
+                        <h2 className={countryStyles.cardTitle}>
+                          {blog.node.title}
+                        </h2>
                       </Link>
                     </Col>
                   </Row>
@@ -78,6 +79,5 @@ function Europe() {
     </Layout>
   )
 }
-
 
 export default Europe
