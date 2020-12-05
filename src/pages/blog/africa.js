@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { Row, Col, Card, Badge } from "react-bootstrap"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
