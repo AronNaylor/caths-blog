@@ -7,13 +7,15 @@ import SEO from "../../components/seo"
 function Africa() {
   const blogData = useStaticQuery(graphql`
     query {
-      allContentfulBlogPost {
+      allContentfulBlogPost(filter: { tag: { eq: "Africa" } }) {
         edges {
           node {
             title
             slug
             tag
+            country
             publishedDate(formatString: "MMMM DD YYYY")
+            shortDesc
           }
         }
       }
@@ -24,7 +26,7 @@ function Africa() {
 
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Africa" />
       <h1>Blog</h1>
       <Link to="/">Go back to the homepage</Link>
       <ol>
